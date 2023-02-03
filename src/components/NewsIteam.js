@@ -15,14 +15,14 @@ export class NewsIteam extends Component {
     const img_height = {
       height:"200px"
     }
-    let { title, desc, imgUrl,author,source,published,url} = this.props;
+    let { title,imgUrl,author,source,published,url} = this.props;
     return (
       <>
         <div className="container">
           <div className="row mb-2 border bordered" style={row_height}>
             <div className="col-md-4">
               <div>
-                <img className="w-100" style={img_height} src={imgUrl} />
+                <img className="w-100" style={img_height} src={imgUrl}/>
               </div>
             </div>
             <div className="col-md-8">
