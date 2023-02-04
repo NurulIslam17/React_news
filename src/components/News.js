@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NewsIteam from "./NewsIteam";
 
 export class News extends Component {
+  
   constructor() {
     super();
     this.state = {
@@ -12,8 +13,7 @@ export class News extends Component {
   }
 
   async componentDidMount() {
-    let url =
-      "https://newsapi.org/v2/top-headlines?country=in&category=sport&apiKey=e15031f9611f4500a2595fa64397b920&pagesize=6&page=1";
+    let url ="https://newsapi.org/v2/top-headlines?country=in&category=sport&apiKey=e15031f9611f4500a2595fa64397b920&pagesize=6&page=1";
     let data = await fetch(url);
     let parseData = await data.json();
     this.setState({ articles: parseData.articles,
